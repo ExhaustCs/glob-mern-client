@@ -39,9 +39,7 @@ export default function Write() {
         newPost
       );
       console.log(res);
-      window.location.replace(
-        'https://glob-a-blog-app.herokuapp.com/api/post/' + res.data._id
-      );
+      window.location.replace('/post/' + res.data._id);
     } catch (err) {}
   };
   return (

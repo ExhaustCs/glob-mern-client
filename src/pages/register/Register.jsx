@@ -13,11 +13,14 @@ export default function Register() {
     e.preventDefault();
     setError(false);
     try {
-      const response = await axios.post('/auth/register', {
-        username,
-        password,
-        email,
-      });
+      const response = await axios.post(
+        'https://glob-a-blog-app.herokuapp.com/api/auth/register',
+        {
+          username,
+          password,
+          email,
+        }
+      );
       // console.log(response);
 
       response.data && window.location.replace('/login');

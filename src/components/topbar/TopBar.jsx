@@ -11,7 +11,7 @@ export default function TopBar() {
 
   const [profilePicture, setProfilePicture] = useState(false);
   const { user, dispatch } = useContext(Context);
-  const publicFolder = 'http://localhost:8080/images/';
+  const publicFolder = 'https://glob-a-blog-app.herokuapp.com/images/';
   const handleLogout = () => {
     dispatch(Logout());
     window.location.replace('/');

@@ -14,7 +14,9 @@ export default function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios('/post' + search);
+        const response = await axios(
+          'https://glob-a-blog-app.herokuapp.com/api/post' + search
+        );
         setPosts(response.data);
       } catch (error) {
         console.error(error);

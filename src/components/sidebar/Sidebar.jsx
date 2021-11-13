@@ -7,7 +7,9 @@ export default function Sidebar() {
 
   useEffect(() => {
     const fetchCategories = async () => {
-      const response = await axios('/categories');
+      const response = await axios(
+        'https://glob-a-blog-app.herokuapp.com/api/categories'
+      );
       setCategories(response.data);
     };
 

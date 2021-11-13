@@ -18,7 +18,7 @@ export default function Settings() {
   const [password, setPassword] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const publicFolder = 'http://localhost:8080/images/';
+  const publicFolder = 'https://glob-a-blog-app.herokuapp.com/images/';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,12 +38,18 @@ export default function Settings() {
       updatedUser.profilePic = filename;
 
       try {
-        await axios.post('/upload', data);
+        await axios.post(
+          'https://glob-a-blog-app.herokuapp.com/api/upload',
+          data
+        );
       } catch (err) {}
     }
 
     try {
-      const res = await axios.put('/user/' + user._id, updatedUser);
+      const res = await axios.put(
+        'https://glob-a-blog-app.herokuapp.com/api/user/' + user._id,
+        updatedUser
+      );
       setIsSuccess(true);
       dispatch(UpdateSuccess(res.data));
       console.log(res.data);

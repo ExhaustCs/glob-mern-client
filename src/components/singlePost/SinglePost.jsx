@@ -9,7 +9,7 @@ export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split('/')[2];
   const [post, setPost] = useState({});
-  const publicFolder = 'http://localhost:8080/images/';
+  const publicFolder = 'https://glob-a-blog-app.herokuapp.com/images/';
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
   const [file, setFile] = useState(null);
@@ -18,7 +18,9 @@ export default function SinglePost() {
 
   useEffect(() => {
     const getPost = async () => {
-      const response = await axios(`/post/${path}`);
+      const response = await axios(
+        `https://glob-a-blog-app.herokuapp.com/api/post/${path}`
+      );
       setPost(response.data);
       setTitle(response.data.title);
       setDesc(response.data.description);
@@ -28,9 +30,12 @@ export default function SinglePost() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete('/post/' + path, {
-        data: { username: user.username },
-      });
+      await axios.delete(
+        'https://glob-a-blog-app.herokuapp.com/api/post/' + path,
+        {
+          data: { username: user.username },
+        }
+      );
       setUpdate(false);
     } catch (error) {
       console.log(error);
@@ -54,7 +59,10 @@ export default function SinglePost() {
     }
 
     try {
-      const response = await axios.put('/post/' + path, updatedPost);
+      const response = await axios.put(
+        'https://glob-a-blog-app.herokuapp.com/api/post/' + path,
+        updatedPost
+      );
       setUpdate(false);
       window.location.reload();
       console.log('update:', response);

@@ -22,8 +22,10 @@ export default function Sidebar() {
         <img src='https://th.wallhaven.cc/small/6o/6od3px.jpg' alt='' />
         {/* <img src={aboutMeProfile} alt="" /> */}
         <p>
-          Lot features not added in yet including: ABOUT page * CONTACT page
-          Categories * Able to edit the about me section - Chris
+          Please register/login to create a post <br /> Lot of features not
+          added in yet including: <br />
+          ABOUT page <br /> CONTACT page <br> </br> Categories <br /> Able to
+          edit the about me section - Chris
         </p>
       </div>
       <div className='sidebarItem'>

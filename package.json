@@ -37,5 +37,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://www.localhost:8080/api"
+  "proxy": "https://glob-a-blog-app.herokuapp.com/api"
 }

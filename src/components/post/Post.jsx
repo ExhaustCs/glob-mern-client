@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './post.css';
 
 export default function Post({ post }) {
-  const publicFolder = 'http://localhost:8080/images/';
+  const publicFolder = 'https://glob-a-blog-app.herokuapp.com/images/';
   return (
     <div className='post'>
       <Link to={`/post/${post._id}`}>

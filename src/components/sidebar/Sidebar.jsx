@@ -24,8 +24,8 @@ export default function Sidebar() {
         <p>
           Please register/login to create a post <br /> Lot of features not
           added in yet including: <br />
-          ABOUT page <br /> CONTACT page <br> </br> Categories <br /> Able to
-          edit the about me section - Chris
+          ABOUT page <br /> CONTACT page <br /> Categories <br /> Able to edit
+          the about me section - Chris
         </p>
       </div>
       <div className='sidebarItem'>

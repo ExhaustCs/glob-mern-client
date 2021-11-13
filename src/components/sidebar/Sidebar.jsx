@@ -22,9 +22,8 @@ export default function Sidebar() {
         <img src='https://th.wallhaven.cc/small/6o/6od3px.jpg' alt='' />
         {/* <img src={aboutMeProfile} alt="" /> */}
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas,
-          distinctio tenetur. Id dolorem ab facere, odit natus deserunt in autem
-          ullam at eveniet, quam quos.
+          Lot features not added in yet including: ABOUT page * CONTACT page
+          Categories * Able to edit the about me section - Chris
         </p>
       </div>
       <div className='sidebarItem'>

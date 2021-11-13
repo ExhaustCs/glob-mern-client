@@ -4,7 +4,9 @@ export default function Header() {
   return (
     <div className='header'>
       <div className='headerTitles'>
-        <span className='headerTitleSm'>Not your Mom's blog</span>
+        <span className='headerTitleSm'>
+          The Best blog site (in my hometown)
+        </span>
         <span className='headerTitleLg'>glob</span>
       </div>
       <img
